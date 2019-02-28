@@ -1,0 +1,21 @@
+<!doctype html>
+<html xmlns:th="http://www.w3.org/1999/xhtml" xmlns:shiro="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>注册页面</title>
+</head>
+<body>
+    <h3 th:text="${name}"></h3>
+    <hr>
+    <div shiro:hasPermission="user:add">
+        用户添加功能: <a href="/user/add">用户添加</a><br>
+    </div>
+    <div shiro:hasPermission="user:edit">
+        用户编辑页面: <a href="/user/edit">用户更新</a>
+    </div>
+    <a href="/user/login/">登录</a>
+</body>
+</html>
